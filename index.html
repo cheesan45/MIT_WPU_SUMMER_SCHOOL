@@ -3,86 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Shaikh - Portfolio</title>
-    <meta name="description" content="Portfolio of Ahmed Shaikh, a student at MIS passionate about science, history, and gaming.">
-    <!-- Google Fonts: Outfit -->
+    <title>WanderLuxe - Premium Travel Platform</title>
+    <!-- Modern Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#home" class="logo">Ahmed.</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Ahmed Shaikh</h1>
-            <p class="hero-subtitle">9th Grade Student | Science & History Enthusiast | Gamer</p>
-            <a href="#about" class="cta-button">Discover My World</a>
+    <!-- App Container -->
+    <div id="app">
+        
+        <!-- Login Screen Mockup -->
+        <div id="login-screen" class="screen active">
+            <div class="login-bg"></div>
+            <div class="login-container">
+                <div class="login-card glass-panel">
+                    <div class="brand">
+                        <h1>WanderLuxe.</h1>
+                        <p>Discover the world's most breathtaking destinations.</p>
+                    </div>
+                    <form id="login-form">
+                        <div class="input-group">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Email address" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Sign In</button>
+                    </form>
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                    <button id="google-login" class="btn-outline">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google" width="20">
+                        Continue with Google
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-        </div>
-    </header>
 
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text glass-card">
-                        <p>Hi, I'm Ahmed! I'm a 9th-grade student at MITCON International School (MIS). I have a deep curiosity for how the world works, which fuels my passion for <strong>Science</strong> and <strong>History</strong>. While I might not be the biggest fan of math (too many formulas!), I love learning through great explanations and hands-on experiences.</p>
-                        <p>When I'm not studying, you can usually find me <strong>playing games</strong> or immersed in a good story. I don't watch a lot of TV, but <em>Daredevil</em> completely captivated me with its incredible acting and storyline. It set the bar so high that nothing else quite compares!</p>
-                        <p>I don't have any pets (allergies in the family!), but I bring plenty of energy and enthusiasm to everything I do. I'm always looking to learn, grow, and eventually make my way to a great college.</p>
+        <!-- Main Dashboard / Home Screen -->
+        <div id="home-screen" class="screen">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a href="#" class="logo">WanderLuxe.</a>
+                    <div class="nav-links">
+                        <a href="#" class="active">Discover</a>
+                        <a href="#">Destinations</a>
+                        <a href="#">Bookings</a>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="User">
+                        <button id="logout-btn" class="btn-text">Sign Out</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </nav>
 
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">My Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card glass-card">
-                        <div class="project-image placeholder-1"></div>
-                        <div class="project-info">
-                            <h3>Science Fair Exploration</h3>
-                            <p>An interactive exploration of physics principles in everyday life.</p>
+            <!-- Hero Section with Global Search -->
+            <header class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Where to next?</h1>
+                    <p class="hero-subtitle">Explore top-rated destinations, exclusive stays, and rich cultural experiences.</p>
+                    
+                    <div class="search-bar-container glass-panel">
+                        <div class="search-input">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="country-search" placeholder="Search a country (e.g., Japan, Italy, France)..." autocomplete="off">
                         </div>
-                    </article>
-                    <article class="project-card glass-card">
-                        <div class="project-image placeholder-2"></div>
-                        <div class="project-info">
-                            <h3>Historical Timeline</h3>
-                            <p>A digital showcase of major historical events that shaped our modern world.</p>
-                        </div>
-                    </article>
-                    <article class="project-card glass-card">
-                        <div class="project-image placeholder-3"></div>
-                        <div class="project-info">
-                            <h3>Game Concept Design</h3>
-                            <p>Initial sketches and mechanics for an upcoming adventure game.</p>
-                        </div>
-                    </article>
+                        <button class="btn-primary" id="search-btn">Explore</button>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </header>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Ahmed Shaikh. Built with passion.</p>
+            <!-- Main Content Area -->
+            <main class="main-content">
+                
+                <!-- Filters -->
+                <section class="filters-section">
+                    <div class="container flex-between">
+                        <h2 class="section-title" id="results-title">Trending Globally</h2>
+                        <div class="filter-pills">
+                            <button class="filter-btn active" data-filter="All">All Places</button>
+                            <button class="filter-btn" data-filter="Nature"><i class="fa-solid fa-leaf"></i> Nature</button>
+                            <button class="filter-btn" data-filter="Historical"><i class="fa-solid fa-landmark"></i> Historical</button>
+                            <button class="filter-btn" data-filter="Urban"><i class="fa-solid fa-city"></i> Urban</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Results Grid -->
+                <section class="results-section">
+                    <div class="container">
+                        <div id="destinations-grid" class="destinations-grid">
+                            <!-- Cards dynamically injected here via JS -->
+                        </div>
+                        <div id="no-results" class="no-results hidden">
+                            <i class="fa-solid fa-plane-slash"></i>
+                            <h3>No destinations found</h3>
+                            <p>Try searching for a different country or adjusting your filters.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            
+            <footer>
+                <div class="container">
+                    <p>&copy; 2026 WanderLuxe. All rights reserved.</p>
+                </div>
+            </footer>
         </div>
-    </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
